@@ -1,0 +1,75 @@
+Functional dependencies
+
+Person
+	per_id -> name
+	per_id -> street_name
+	per_id -> city
+	per_id -> region
+	per_id -> zip_code
+	per_id -> email
+	per_id -> gender
+
+	email -> name
+	email -> street
+	email -> city
+	email -> region
+	email -> zip_code
+	email -> per_id
+	email -> gender
+
+	city, street, region -> zip_code
+
+Company
+	comp_id -> name
+	comp_id -> street
+	comp_id -> city
+	comp_id -> region
+	comp_id -> zip_code
+	comp_id -> primary_sector
+	comp_id -> website
+
+	website -> name
+	website -> street
+	website -> city
+	website -> region
+	website -> zip_code
+	website -> primary_sector
+	website -> comp_id
+
+	city, street, region -> zip_code
+	
+
+Skill
+	k_id -> title
+	k_id -> description
+	k_id -> level
+
+Course
+	c_id -> title
+	c_id -> level
+	c_id -> description
+	c_id -> status
+	c_id -> total_price
+
+Section
+	c_id, sec_id, year -> complete_date
+	c_id, sec_id, year -> offered_by
+	
+	c_id, sec_id, year -> price
+
+// c_id, sec_id, year -> format
+
+
+Job
+	jb_id -> per_id
+	jb_id -> comp_id
+	jb_id -> jb_id
+	ib_id -> type
+	jb_id -> pay_rate
+	jb_id -> pay_type
+
+Job_profile
+	jp_id -> title
+	jp_id -> description
+	
+
